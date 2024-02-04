@@ -13,7 +13,7 @@ function AboutCard() {
             <br />
             I'm currently Learning MERN Stack Framework.
             <br />
-            I'm in <span className="purple">3rd</span> 3rd Year and pursuing my B.tech Degree in IT branch from Ahmedabad Institute of Technology <strong>(AIT)</strong>
+            I'm in <span className="purple">3rd</span> Year and pursuing my B.tech Degree in IT branch from Ahmedabad Institute of Technology <strong>(AIT)</strong>
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -36,7 +36,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
-          <footer className="blockquote-footer">Amish</footer>
+          <footer className="blockquote-footer">Amish Pithva</footer>
         </blockquote>
       </Card.Body>
     </Card>
