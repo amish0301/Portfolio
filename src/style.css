@@ -142,7 +142,7 @@ button:focus {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 1rem 2rem;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
@@ -150,6 +150,13 @@ button:focus {
     display: none !important;
   }
 }
+
+@media (max-width: 460px) {
+  .navbar {
+    padding: 1rem 2.3rem !important;
+  }
+}
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -158,7 +165,6 @@ button:focus {
   height: 1.2em !important;
   width: 2em !important;
   transform: scale(4.1);
-  padding-block-start: 1em !important; 
 }
 
 .navbar-nav .nav-link {
