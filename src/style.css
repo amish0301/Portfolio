@@ -176,7 +176,7 @@ button:focus {
     padding: 0.7rem 1rem !important;
   }
   .logo {
-    margin-left: 12px !important;
+    transform: scale(3.4);
   }
 }
 
