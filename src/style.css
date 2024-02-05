@@ -176,7 +176,7 @@ button:focus {
   }
 }
 
-@media (max-width: 470px) {
+@media (min-width: 470px) {
   .logo {
     transform: scale(3.9) !important;
   }
