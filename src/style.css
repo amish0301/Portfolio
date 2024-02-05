@@ -157,7 +157,8 @@ button:focus {
 .logo {
   height: 1.2em !important;
   width: 2em !important;
-  transform: scale(4.3);
+  transform: scale(4.1);
+  padding-block-start: 1em !important; 
 }
 
 .navbar-nav .nav-link {
@@ -173,12 +174,6 @@ button:focus {
 @media (max-width: 767px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
-  }
-}
-
-@media (min-width: 470px) {
-  .logo {
-    transform: scale(3.9) !important;
   }
 }
 
