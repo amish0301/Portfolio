@@ -53,8 +53,8 @@ function Home2() {
               </i>
               <br />
               <br />
-              For more information you can checkout my <ImPointRight /> 
-              <strong className="purple">About</strong> Section.
+              For more information you can checkout my <ImPointRight /> {" "}
+              <bold className="purple">About</bold>{" "}Section.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
