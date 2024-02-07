@@ -7,6 +7,7 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
+import { ImPointRight } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -50,6 +51,10 @@ function Home2() {
               <i>
                 <b className="purple"> React.js and Next.js</b>
               </i>
+              <br />
+              <br />
+              For more information you can checkout my <ImPointRight /> 
+              <strong className="purple">About</strong> Section.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
