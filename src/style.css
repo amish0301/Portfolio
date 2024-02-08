@@ -355,6 +355,84 @@ button:focus {
   padding-inline-start: 0 !important;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-block: 30px;
+  margin-top: 100px;
+  color: white !important;
+}
+
+.contact-container > div {
+  display: flex !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .contact-logo {
+    transform: scale(2.5);
+    margin-left: 20px;
+    padding-bottom: 3px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  font-size: 15px;
+  padding-block: 25px;
+
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 5px;
+
+    &:focus {
+      border: 2px solid rgba(0,206,158,1);
+    }
+  }
+
+  label {
+    margin-top: 1rem;
+  }
+
+  input[type='submit'] {
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: rgba(249,105,14);
+    color: white !important;
+    border: none;
+    height: 45px;
+    transition: background-color 1s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #004369;
+    font-weight: 600;
+  }
+
+  input[type="submit"]:focus, input[type="submit"]:active {
+    background-color: black;
+    transition: none;
+  }
+
+  .msg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  form  {
+    width: 100%;
+  }
+} 
+
 .home-social-icons {
   position: relative !important;
   display: inline-block !important;

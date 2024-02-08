@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "./Contact";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
@@ -63,6 +64,8 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+        {/* subject query form */}
+        <Contact />
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
