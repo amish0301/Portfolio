@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Container } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { MdContactMail } from "react-icons/md";
-import {toast} from 'react-toastify';
+import { toast } from "react-toastify";
 
 function Contact() {
   const form = useRef();
@@ -63,7 +63,6 @@ function Contact() {
         <textarea name="message" className="msg" required />
         <input type="submit" value="Send" />
       </form>
-      
     </Container>
   );
 }
