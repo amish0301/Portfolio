@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { Button, Container } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { MdContactMail } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const form = useRef();
@@ -15,20 +17,23 @@ function Contact() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          toast("🙌 Your message was sent Successfully!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          // console.log("FAILED...", error.text);
+          alert("FAILED! due to: " + error.message);
         }
       );
+
+    e.target.reset();
   };
 
   return (
     <Container className="contact-container">
-        <div>
-            <h2 style={{ fontWeight: "bold" }}>Contact Me</h2>
-            <MdContactMail className="contact-logo"/>
-        </div>
+      <div>
+        <h2 style={{ fontWeight: "bold" }}>Contact Me</h2>
+        <MdContactMail className="contact-logo" />
+      </div>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" placeholder="your name" required />
@@ -43,6 +48,7 @@ function Contact() {
         <textarea name="message" className="msg" required />
         <input type="submit" value="Send" />
       </form>
+      <ToastContainer />
     </Container>
   );
 }
