@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { Container } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { MdContactMail } from "react-icons/md";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import {toast} from 'react-toastify';
 
 function Contact() {
   const form = useRef();
@@ -16,7 +15,7 @@ function Contact() {
       })
       .then(
         () => {
-          toast.success("Your message was sent Successfully!", {
+          toast.success("Message sent Successfully!", {
             position: "top-right",
             autoClose: 4000,
             hideProgressBar: false,
@@ -64,17 +63,7 @@ function Contact() {
         <textarea name="message" className="msg" required />
         <input type="submit" value="Send" />
       </form>
-      <ToastContainer
-        theme="colored"
-        position="top-right"
-        autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      
     </Container>
   );
 }
