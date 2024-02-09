@@ -19,7 +19,7 @@ function Contact() {
         () => {
           toast.success("Your message was sent Successfully!", {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -29,7 +29,16 @@ function Contact() {
         },
         (error) => {
           // console.log("FAILED...", error.text);
-          alert("FAILED! due to: " + error.message);
+          toast.error(`FAILED... due to ${error.message}`, {
+            theme: "dark",
+            position: "top-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         }
       );
 
@@ -56,7 +65,17 @@ function Contact() {
         <textarea name="message" className="msg" required />
         <input type="submit" value="Send" />
       </form>
-      <ToastContainer />
+      <ToastContainer
+        theme="colored"
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Container>
   );
 }
