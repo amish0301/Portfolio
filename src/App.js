@@ -5,7 +5,10 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
+// import Resume from "./components/Resume/ResumeNew";
+// import { ToastContainer } from "react-toastify";
+// import 'react-toastify/dist/ReactToastify.css';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -31,6 +34,7 @@ function App() {
   return (
     <Router>
       <Preloader load={load} />
+      {/* <ToastContainer /> */}
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
