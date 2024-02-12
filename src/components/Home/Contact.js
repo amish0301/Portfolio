@@ -16,8 +16,7 @@ function Contact() {
         "template_8paa9hc",
         form.current,
         "WfJIBkAtmucEB93im"
-      )
-      .then(
+      ).then(
         () => {
           // toast.success("Message sent Successfully!", {
           //   position: "top-right",
@@ -31,7 +30,7 @@ function Contact() {
           console.log("Success");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED..." + error.text);
           // toast.error(`FAILED... due to ${error.message}`, {
           //   theme: "dark",
           //   position: "top-right",
