@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Container } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { MdContactMail } from "react-icons/md";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 function Contact() {
   const form = useRef();
@@ -18,29 +18,27 @@ function Contact() {
         "WfJIBkAtmucEB93im"
       ).then(
         () => {
-          // toast.success("Message sent Successfully!", {
-          //   position: "top-right",
-          //   autoClose: 3000,
-          //   hideProgressBar: false,
-          //   closeOnClick: true,
-          //   pauseOnHover: true,
-          //   draggable: true,
-          //   progress: undefined,
-          // });
-          console.log("Success");
+          toast.success("Message sent Successfully!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         },
         (error) => {
-          console.log("FAILED..." + error.text);
-          // toast.error(`FAILED... due to ${error.message}`, {
-          //   theme: "dark",
-          //   position: "top-right",
-          //   autoClose: 3000,
-          //   hideProgressBar: false,
-          //   closeOnClick: true,
-          //   pauseOnHover: true,
-          //   draggable: true,
-          //   progress: undefined,
-          // });
+          toast.error(`FAILED... due to ${error.message}`, {
+            theme: "dark",
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         }
       );
 
