@@ -20,7 +20,7 @@ function Contact() {
         () => {
           toast.success("Message sent Successfully!", {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -32,7 +32,7 @@ function Contact() {
           toast.error(`FAILED... due to ${error.message}`, {
             theme: "dark",
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
