@@ -34,10 +34,7 @@ function Home2() {
               My field of Interest's are building new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
+                also in areas related to <b className="purple">Blockchain.</b>
               </i>
               <br />
               <br />
@@ -55,8 +52,11 @@ function Home2() {
               </i>
               <br />
               <br />
-              For more information you can checkout my <ImPointRight /> {" "}
-              <bold className="purple">{<Link to="/about">About</Link>}</bold>{" "}Section.
+              For more information you can checkout my <ImPointRight />{" "}
+              <bold className="purple">
+                {<Link to="/about">About</Link>}
+              </bold>{" "}
+              Section.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -68,7 +68,7 @@ function Home2() {
 
         {/* subject query form */}
         <Contact />
-        
+
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
