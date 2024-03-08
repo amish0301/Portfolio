@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 import { ImPointRight } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home2() {
   return (
@@ -55,7 +56,7 @@ function Home2() {
               <br />
               <br />
               For more information you can checkout my <ImPointRight /> {" "}
-              <bold className="purple">About</bold>{" "}Section.
+              <bold className="purple">{<Link to="/about">About</Link>}</bold>{" "}Section.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -64,6 +65,7 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
         {/* subject query form */}
         <Contact />
         <Row>
