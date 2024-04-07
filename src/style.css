@@ -390,11 +390,11 @@ form {
     height: 40px;
     padding: 7px;
     outline: none;
-    border: 1px solid rgb(220,220,220);
+    border: 1px solid rgb(220, 220, 220);
     border-radius: 5px;
 
     &:focus {
-      border: 2px solid rgba(0,206,158,1);
+      border: 2px solid rgba(0, 206, 158, 1);
     }
   }
 
@@ -402,22 +402,23 @@ form {
     margin-top: 1rem;
   }
 
-  input[type='submit'] {
+  input[type="submit"] {
     margin-top: 2rem;
     cursor: pointer;
-    background-color: rgba(249,105,14);
+    background-color: rgba(249, 105, 14);
     color: white !important;
     border: none;
     height: 45px;
     transition: background-color 1s;
   }
-  
+
   input[type="submit"]:hover {
     background-color: #004369;
     font-weight: 600;
   }
 
-  input[type="submit"]:focus, input[type="submit"]:active {
+  input[type="submit"]:focus,
+  input[type="submit"]:active {
     background-color: black;
     transition: none;
   }
@@ -428,10 +429,10 @@ form {
 }
 
 @media (max-width: 650px) {
-  form  {
+  form {
     width: 100%;
   }
-} 
+}
 
 .home-social-icons {
   position: relative !important;
@@ -693,6 +694,25 @@ form {
   color: white !important;
 }
 
+.notfound-container {
+  position: relative !important;
+  min-height: 100vh !important;
+  min-width: fit-content !important;
+}
+
+.resume-notfound {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -716,6 +736,13 @@ form {
   .resume-right {
     padding-right: 15px !important;
     padding-left: 15px !important;
+  }
+
+  .notfound-container {
+    width: 100%;
+    height: 100%;
+    font-size: medium;
+    color: #fff;
   }
 }
 .resume .resume-title {
