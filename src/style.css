@@ -694,6 +694,7 @@ form {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  min-width: 100% !important;
 }
 
 .notfound-container {
@@ -730,6 +731,10 @@ form {
 }
 
 @media (max-width: 767px) {
+  .resume-section {
+    min-width: fit-content !important;
+  }
+
   .resume-left {
     padding-right: 15px !important;
     padding-left: 15px !important;
