@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import BMI_CAL from '../../Assets/Projects/BMI_CAL.png'
-import expense from '../../Assets/Projects/Expense-Tracker.png' 
+import expense from '../../Assets/Projects/Expense-Tracker.png'
+import Chrome_Extension from '../../Assets/Projects/App.png' 
 
 function Projects() {
   return (
@@ -38,19 +39,19 @@ function Projects() {
               demoLink="https://expense-tracker-app-amish.vercel.app/"
             />
           </Col>
-
-          {/* <Col md={4} className="project-card">
+          
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={Chrome_Extension}
               isBlog={false}
               title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              description="A Customised Reminders for your well-being. where you can set personalized intervals for water breaks and screen-off periods and recieve timely notifications tailored to your schedule. This is a simple app and fully responsive in nature. Techstack used: React.js and Bootstrap."
+              ghLink="https://github.com/amish0301/Chrome-Extension" 
+              demoLink="https://chromewebstore.google.com/"          
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
