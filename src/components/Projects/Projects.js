@@ -44,7 +44,7 @@ function Projects() {
             <ProjectCard
               imgPath={Chrome_Extension}
               isBlog={false}
-              title="Editor.io"
+              title="Chrome Extension - Alertify"
               description="A Customised Reminders for your well-being. where you can set personalized intervals for water breaks and screen-off periods and recieve timely notifications tailored to your schedule. This is a simple app and fully responsive in nature. Techstack used: React.js and Bootstrap."
               ghLink="https://github.com/amish0301/Chrome-Extension" 
               demoLink="https://chromewebstore.google.com/"          
