@@ -11,9 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Amish Pithva </span>
             from <span className="purple"> Gujarat, India.</span>
             <br />
-            I'm currently Learning MERN Stack Framework.
+            I'm a <span className="purple">Full Stack Developer (in MERN) </span> skilled in Building robust and scalable web applications.
             <br />
-            I'm in <span className="purple">3rd</span> Year and pursuing my B.tech Degree in IT branch from Ahmedabad Institute of Technology <strong>(AIT)</strong>
+            I'm in <span className="purple">4th</span> Year and pursuing B.tech Degree in IT branch from Ahmedabad Institute of Technology <strong>(AIT)</strong>
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
