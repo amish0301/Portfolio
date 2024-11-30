@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import scrollImg from "../Assets/Arrow_top.png";
 
 const ScrollToTop = () => {
@@ -6,11 +6,11 @@ const ScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const handleScrollBtnVisibility = () => {
-      window.scrollY > 300
-        ? (document.querySelector(".scroll-to-top").style.display = "block")
-        : (document.querySelector(".scroll-to-top").style.display = "none");
+      setIsVisible(window.scrollY > 500);
     };
 
     window.addEventListener("scroll", handleScrollBtnVisibility);
@@ -22,9 +22,11 @@ const ScrollToTop = () => {
 
   return (
     <>
-      <button className="scroll-to-top" onClick={handleScrollToTop}>
-        <img src={scrollImg} alt="scroll-to-top" />
-      </button>
+      {isVisible && (
+        <button className="scroll-to-top" onClick={handleScrollToTop}>
+          <img src={scrollImg} alt="scroll-to-top" />
+        </button>
+      )}
     </>
   );
 };

@@ -86,7 +86,7 @@ button:focus {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
   /* padding: 0.3rem 1.8rem !important; */
-  padding-block: .5rem !important;
+  padding-block: 0.5rem !important;
   font-size: 1.2rem !important;
 }
 
@@ -249,6 +249,7 @@ button:focus {
     transform: rotate(0deg);
   }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -258,7 +259,7 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 30px !important;
 }
 
 .home-section {
@@ -268,7 +269,6 @@ button:focus {
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
-  padding-top: 30px !important;
 }
 
 .home-content {
@@ -301,7 +301,7 @@ button:focus {
   color: #b562d6 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
@@ -309,6 +309,10 @@ button:focus {
   }
   .Typewriter__cursor {
     display: none !important;
+  }
+  .heading-name, .heading {
+    font-size: 1.8rem !important;
+    padding-left: 45px !important;
   }
 }
 

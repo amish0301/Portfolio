@@ -3,11 +3,7 @@ import Contact from "./Contact";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { ImPointRight } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -30,12 +26,10 @@ function Home2() {
                 <b className="purple"> C++ and Javascript. </b>
               </i>
               <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to <b className="purple">Blockchain.</b>
-              </i>
+              <br />I am a passionate{" "}
+              <b className="purple">Software Developer</b> and{" "}
+              <b className="purple">Full-Stack Developer</b> specializing in the{" "}
+              <b className="purple">MERN Stack</b>.
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
@@ -50,6 +44,15 @@ function Home2() {
               <i>
                 <b className="purple"> React.js and Next.js</b>
               </i>
+              <br />
+              <br />I love building
+              <b className="purple"> scalable web applications</b> and exploring
+              technologies like <b className="purple">AWS</b> and{" "}
+              <b className="purple">Docker</b> to create robust solutions.
+              <br />
+              <br />
+              When I'm not coding, I enjoy brainstorming ideas, learning new
+              tools, and connecting with the tech community to stay inspired.
               <br />
               <br />
               For more information you can checkout my <ImPointRight />{" "}

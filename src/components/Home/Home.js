@@ -25,7 +25,7 @@ function Home() {
                 <strong className="main-name"> AMISH PITHVA</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: "35px 45px", textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
