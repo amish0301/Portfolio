@@ -52,18 +52,19 @@ function Contact() {
         <MdContactMail className="contact-logo" />
       </div>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" placeholder="your name" required />
-        <label>Email</label>
+        <label htmlFor="user_name">Name</label>
+        <input type="text" id="user_name" placeholder="your name" required={true} aria-label="Name" />
+        <label htmlFor="user_email">Email</label>
         <input
           type="email"
-          name="user_email"
+          id="user_email"
           placeholder="your email"
           required
+          aria-label="Email"
         />
-        <label>Message</label>
-        <textarea name="message" className="msg" required />
-        <input type="submit" value="Send" />
+        <label htmlFor="message">Message</label>
+        <textarea id="message" className="msg" required={true} placeholder="write your message here.." name="message" />
+        <input type="submit" aria-label="Submit" value="Send" />
       </form>
     </Container>
   );

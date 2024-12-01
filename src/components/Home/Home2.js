@@ -83,6 +83,7 @@ function Home2() {
                 <a
                   href="https://github.com/amish0301"
                   target="_blank"
+                  aria-label="github"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
@@ -93,6 +94,7 @@ function Home2() {
                 <a
                   href="https://www.linkedin.com/in/amish-pithva-62b83b233/"
                   target="_blank"
+                  aria-label="linkedin"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
@@ -103,6 +105,7 @@ function Home2() {
                 <a
                   href="https://www.instagram.com/strivea_76/"
                   target="_blank"
+                  aria-label="instagram"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
