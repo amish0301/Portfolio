@@ -559,6 +559,8 @@ form {
 .project-card-view img {
   height: 50%; /* Image occupies half of the card */
   object-fit: contain; /* Ensure the image scales properly */
+  width: 100%;
+  max-height: 300px;
 }
 
 .project-card-view .card-body {
@@ -571,13 +573,14 @@ form {
 
 .project-card-view .button-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px; /* Adds spacing between buttons */
   margin-top: .5rem;
   justify-content: center;
 }
 
 .project-card-view button {
-  flex: 1; /* Buttons take equal width */
+  flex: 1;
   text-align: center;
   padding: 10px;
 }
@@ -631,9 +634,31 @@ form {
   transition: all 0.4s ease 0s !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .tech-icons {
     margin: 10px !important;
+  }
+
+  .project-card-view {
+    height: auto;
+    margin: 0.5rem;
+  }
+
+  .project-card-view img {
+    max-height: 200px; /* Reduce image height on smaller screens */
+  }
+
+  .project-card-view .card-body {
+    padding: 0.5rem;
+  }
+
+  .project-card-view .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Increase gap for better spacing */
+  }
+
+  .project-card-view button {
+    width: 100%; /* Make buttons span the full width */
   }
 }
 
@@ -642,6 +667,7 @@ form {
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
