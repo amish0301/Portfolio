@@ -63,7 +63,7 @@ function Contact() {
           aria-label="Email"
         />
         <label htmlFor="message">Message</label>
-        <textarea id="message" className="msg" required={true} placeholder="write your message here.." name="message" />
+        <textarea  id="message" className="msg" required={true} placeholder="type your message here.." name="message" />
         <input type="submit" aria-label="Submit" value="Send" />
       </form>
     </Container>
