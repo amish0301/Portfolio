@@ -11,6 +11,7 @@ const NotFoundLayout = () => {
                     The page you’re looking for doesn’t exist.
                 </p>
             </div>
+            <button className='not-found-btn' type="button" aria-label='goBack button' id='btn' onClick={() => window.location.pathname = '/'}>Go Back</button>
         </Container>
     )
 }

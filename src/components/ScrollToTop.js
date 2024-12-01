@@ -24,7 +24,7 @@ const ScrollToTop = () => {
     <>
       {isVisible && (
         <button className="scroll-to-top" onClick={handleScrollToTop}>
-          <img src={scrollImg} alt="scroll-to-top" />
+          <img src={scrollImg} loading="lazy" alt="scroll-to-top" />
         </button>
       )}
     </>

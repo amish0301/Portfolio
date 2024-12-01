@@ -1,12 +1,12 @@
 import React from "react";
-import Contact from "./Contact";
-import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
+import { Col, Container, Row } from "react-bootstrap";
 import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { ImPointRight } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
+import { ImPointRight } from "react-icons/im";
+import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
+import myImg from "../../Assets/avatar.svg";
+import Contact from "./Contact";
 
 function Home2() {
   return (
@@ -64,7 +64,7 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myImg} loading="lazy" className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>

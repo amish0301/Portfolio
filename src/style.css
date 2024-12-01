@@ -306,7 +306,8 @@ button:focus {
   .Typewriter__cursor {
     display: none !important;
   }
-  .heading-name, .heading {
+  .heading-name,
+  .heading {
     font-size: 1.8rem !important;
     padding-left: 45px !important;
   }
@@ -407,7 +408,7 @@ form {
   input[type="submit"] {
     margin-top: 2rem;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white !important;
     border: none;
     height: 45px;
@@ -539,66 +540,46 @@ form {
 }
 
 .project-card {
-  padding-block: 50px !important;
-  padding-inline: 25px !important;
-  height: 100% !important;
+  padding-inline: 30px;
+  padding-block: 15px;
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-}
-.project-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
-}
-
-.blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked */
+  justify-content: space-between; /* Distribute content evenly */
+  height: 600px; /* Fixed height for uniformity */
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
 }
 
-.blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+.project-card-view img {
+  height: 50%; /* Image occupies half of the card */
+  object-fit: contain; /* Ensure the image scales properly */
 }
 
-.blog-link {
-  color: white !important;
-  text-decoration: none !important;
+.project-card-view .card-body {
+  flex: 1; /* Content takes up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.blog-link:hover {
-  cursor: pointer !important;
+.project-card-view .button-container {
+  display: flex;
+  gap: 10px; /* Adds spacing between buttons */
+  margin-top: .5rem;
+  justify-content: center;
 }
 
-.blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
-}
-
-.card-img-top {
-  padding: 20px !important;
-  opacity: 0.8 !important;
-  border-radius: 10px !important;
-}
-
-.blog-img {
-  padding: 0px !important;
-  opacity: 0.8 !important;
-  border-radius: 0px !important;
+.project-card-view button {
+  flex: 1; /* Buttons take equal width */
+  text-align: center;
+  padding: 10px;
 }
 
 .btn-primary {
@@ -750,6 +731,11 @@ form {
     font-size: medium;
     color: #fff;
   }
+
+  .not-found-btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+  }
 }
 .resume .resume-title {
   font-size: 2em;
@@ -856,4 +842,20 @@ form {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.not-found-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.125rem;
+  margin-top: 2.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.not-found-btn:hover {
+  background-color: #1e40af;
 }

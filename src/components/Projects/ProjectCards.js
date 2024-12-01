@@ -7,27 +7,32 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{ objectFit: "contain" }}
-      />
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt="card-img"
+          style={{ objectFit: "contain" }}
+        />
       <Card.Body>
-        <Card.Title style={{ textAlign: "center", fontWeight: "bold", marginBottom: "20px" }}>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
+        <Card.Title
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            marginBottom: "20px",
+          }}
+        >
+          {props.title}
+        </Card.Title>
+        <Card.Text style={{ textAlign: "justify", textTransform: 'capitalize' }}>
           {props.description}
         </Card.Text>
-        <Button
-          variant="primary"
-          href={props.ghLink}
-          target="_blank"
-        >
+        <div className="button-container">
+        <Button variant="primary" href={props.ghLink} target="_blank">
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
-        {"\n"}
-        {"\n"}
+        {/* {"\n"}
+        {"\n"} */}
 
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
@@ -42,6 +47,7 @@ function ProjectCards(props) {
             {"Demo"}
           </Button>
         )}
+        </div>
       </Card.Body>
     </Card>
   );

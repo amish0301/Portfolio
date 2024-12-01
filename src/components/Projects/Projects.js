@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+import { Col, Container, Row } from "react-bootstrap";
+import Chrome_Extension from "../../Assets/Projects/App.png";
 import BMI_CAL from "../../Assets/Projects/BMI_CAL.png";
 import CHAT_APP from "../../Assets/Projects/chatApp-Demo.jpg";
 import expense from "../../Assets/Projects/Expense-Tracker.png";
-import Chrome_Extension from "../../Assets/Projects/App.png";
+import Particle from "../Particle";
+import ProjectCard from "./ProjectCards";
 
 function Projects() {
   return (
@@ -24,7 +24,7 @@ function Projects() {
               imgPath={CHAT_APP}
               isBlog={false}
               title="Talk-A-Tive"
-              description="A realtime chat application build with React.js, Node.js, Express.js, Socket.IO and JWT authentication. It features one to one and Groups chat which are totally authenticated. Only registered Users can send images and emojis. Users can also create private chat rooms with other users. The project is fully responsive. The backend is hosted on Render and the frontend is deployed on Vercel platform. For Faster development MuI is used."
+              description="A realtime chat application build with React.js, Node.js, Express.js, Socket.IO and JWT authentication. It features one to one and Groups chat which are totally authenticated. Users can send files, emojis and Live Location as well. They can create custom rooms for private chats."
               ghLink="https://github.com/amish0301/Chat-App"
               demoLink="https://chatfolio.vercel.app/"
             />
