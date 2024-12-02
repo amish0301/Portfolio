@@ -4,7 +4,6 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from "../src/components/Resume/NotFoundLayout";
-import "./App.css";
 import About from "./components/About/About";
 import Footer from "./components/Footer";
 import Home from "./components/Home/Home";
@@ -13,7 +12,6 @@ import Preloader from "./components/Pre";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 import ScrollToTop from "./components/ScrollToTop";
-import "./style.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
