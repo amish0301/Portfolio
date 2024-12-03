@@ -12,6 +12,7 @@ import Preloader from "./components/Pre";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 import ScrollToTop from "./components/ScrollToTop";
+import DocumentTitle from "./components/useDocumentTitle";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -20,13 +21,13 @@ function App() {
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 1200);
-
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
       <ToastContainer />
+      <DocumentTitle defaultTitle={'Amish Pithva'} />
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
@@ -40,6 +41,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      
     </Router>
   );
 }

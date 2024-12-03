@@ -5,7 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { ImPointRight } from "react-icons/im";
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/hat.webp";
 import Contact from "./Contact";
 
 function Home2() {
@@ -64,7 +64,15 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} loading="lazy" className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                loading="lazy"
+                width={"300px"}
+                height={"200px"}
+                style={{ borderRadius: "50%" }}
+                className="img-fluid"
+                alt="avatar"
+              />
             </Tilt>
           </Col>
         </Row>
