@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Chrome_Extension from "../../Assets/Projects/App.png";
 import BMI_CAL from "../../Assets/Projects/BMI_CAL.png";
 import CHAT_APP from "../../Assets/Projects/chatApp-Demo.jpg";
+import OA_APP from "../../Assets/Projects/OA_Platform.png";
 import expense from "../../Assets/Projects/Expense-Tracker.png";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
@@ -19,6 +20,18 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={OA_APP}
+              isBlog={false}
+              title="YourPrepPartner"
+              description="This platform enables users to take tests and analyze their progress with detailed chart reports. Admins and faculty can create and assign tests to registered users. After completing a test, users can view their quantifiable scores for better performance tracking. For seamless authentication, the platform integrates Google OAuth and credentials-based login, ensuring a user-friendly experience.
+                Used Technologies: React, Express.js, MongoDB, Node.js, Redis (for caching)."
+              ghLink="https://github.com/amish0301/OA-Platform"
+              demoLink="https://oa-umber.vercel.app/"
+            />
+          </Col>
+          
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={CHAT_APP}
@@ -73,18 +86,7 @@ function Projects() {
               // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
           </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col> */}
+         */}
         </Row>
       </Container>
     </Container>
