@@ -25,7 +25,7 @@ function Projects() {
               imgPath={OA_APP}
               isBlog={false}
               title="YourPrepPartner"
-              description="This platform allows users to take tests and track progress with detailed chart reports. Admins and faculty can create and assign tests, while users can view quantifiable scores for performance analysis. It supports Google OAuth and credentials-based login for seamless authentication. Technologies used: React, Express.js, MongoDB, Node.js, and Redis."
+              description="A testing platform where users take tests, track progress with detailed charts, and analyze performance scores. Admins and faculty can create and assign tests. It supports Google OAuth and credentials-based login. Built with React, Express.js, MongoDB, Node.js, and Redis."
               ghLink="https://github.com/amish0301/OA-Platform"
               demoLink="https://oa-umber.vercel.app/"
             />

@@ -6,23 +6,15 @@ import { BsGithub } from "react-icons/bs";
 
 function ProjectCards(props) {
   return (
-    <Card className="project-card-view" style={{ height: "100%" }}>
+    <Card className="project-card-view">
       <Card.Img
         variant="top"
         src={props.imgPath}
         alt="card-img"
-        style={{ objectFit: "contain" }}
+        style={{ maxHeight: "50%" }}
       />
       <Card.Body>
-        <Card.Title
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            marginBottom: "20px",
-          }}
-        >
-          {props.title}
-        </Card.Title>
+        <Card.Title style={{marginBlock: '.5rem'}}>{props.title}</Card.Title>
         <Card.Text
           style={{ textAlign: "justify", textTransform: "capitalize" }}
         >
@@ -37,7 +29,12 @@ function ProjectCards(props) {
           {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
           {!props.isBlog && props.demoLink && (
-            <Button variant="primary" href={props.demoLink} target="_blank">
+            <Button
+              variant="primary"
+              href={props.demoLink}
+              style={{ marginLeft: "10px" }}
+              target="_blank"
+            >
               <CgWebsite /> &nbsp;
               {"Demo"}
             </Button>
