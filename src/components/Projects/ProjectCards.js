@@ -11,16 +11,32 @@ function ProjectCards(props) {
         variant="top"
         src={props.imgPath}
         alt="card-img"
-        style={{ maxHeight: "50%" }}
+        style={{
+          maxHeight: "50%",
+          width: "100%",
+          objectFit: "contain",
+          overflow: "hidden",
+        }}
       />
-      <Card.Body>
-        <Card.Title style={{marginBlock: '.5rem'}}>{props.title}</Card.Title>
+      <Card.Body
+        style={{
+          flexGrow: "1",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          padding: "1rem",
+        }}
+      >
+        <Card.Title style={{ marginBlock: ".5rem" }}>{props.title}</Card.Title>
         <Card.Text
           style={{ textAlign: "justify", textTransform: "capitalize" }}
         >
           {props.description}
         </Card.Text>
-        <div className="button-container">
+        <div
+          className="button-container"
+          style={{ display: "flex", justifyContent: "space-evenly" }}
+        >
           <Button variant="primary" href={props.ghLink} target="_blank">
             <BsGithub /> &nbsp;
             {props.isBlog ? "Blog" : "GitHub"}
@@ -29,12 +45,7 @@ function ProjectCards(props) {
           {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
           {!props.isBlog && props.demoLink && (
-            <Button
-              variant="primary"
-              href={props.demoLink}
-              style={{ marginLeft: "10px" }}
-              target="_blank"
-            >
+            <Button variant="primary" href={props.demoLink} target="_blank">
               <CgWebsite /> &nbsp;
               {"Demo"}
             </Button>
