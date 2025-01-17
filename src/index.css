@@ -403,12 +403,11 @@ button:focus {
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
-  padding-top: 70px !important;
 }
 
 .home-about-description {
   color: white !important;
-  padding-top: 100px !important;
+  padding-top: 50px !important;
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -615,14 +614,6 @@ form {
   background-image: var(--section-background-color) !important;
 }
 
-.project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
-}
-
 .project-card-view {
   display: flex;
   flex-direction: column;
@@ -630,7 +621,7 @@ form {
   position: relative;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -640,9 +631,9 @@ form {
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
-.button-container {
-  margin-top: auto !important;
-  display: flex !important;
+.project-card-view .button-container {
+  display: flex;
+  margin-top: 20px !important;
   justify-content: space-evenly !important;
 }
 
@@ -705,6 +696,8 @@ form {
 
   .button-container {
     flex-direction: column;
+    gap: 15px;
+    margin-top: 10px !important;
   }
 }
 

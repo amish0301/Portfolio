@@ -7,29 +7,20 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{
-          maxHeight: "50%",
-          width: "100%",
-          objectFit: "contain",
-          overflow: "hidden",
-        }}
-      />
-      <Card.Body
-        style={{
-          flexGrow: "1",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "1rem",
-        }}
+      <div
+        style={{ display: "block", overflow: "hidden", objectFit: "contain" }}
       >
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt="card-img"
+          height={"100%"}
+        />
+      </div>
+      <Card.Body>
         <Card.Title style={{ marginBlock: ".5rem" }}>{props.title}</Card.Title>
         <Card.Text
-          style={{ textAlign: "justify", textTransform: "capitalize" }}
+          style={{ textAlign: "justify", textTransform: "capitalize", margin: '1rem 0' }}
         >
           {props.description}
         </Card.Text>
