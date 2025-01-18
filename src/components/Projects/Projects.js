@@ -4,7 +4,7 @@ import Chrome_Extension from "../../Assets/Projects/App.png";
 import BMI_CAL from "../../Assets/Projects/BMI_CAL.png";
 import CHAT_APP from "../../Assets/Projects/chatApp-Demo.png";
 import OA_APP from "../../Assets/Projects/OA_Platform.png";
-import E from "../../Assets/Projects/Expense-Tracker.png";
+import EXPENSE_TRACKER from "../../Assets/Projects/Expense-Tracker.png";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
 
@@ -55,7 +55,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={expense}
+              imgPath={EXPENSE_TRACKER}
               isBlog={false}
               title="Expense Tracker"
               description="A very simple and catchy Expense Tracker App. In which you can add your Profit and expenses at the same time. Basis on your profit-loss you can determine the Net Revenue. This is one page app and totally responsive in nature. Techstack used: React.js and Bootstrap."
