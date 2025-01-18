@@ -628,7 +628,7 @@ form {
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  height: auto !important;
 }
 
 .project-card-view:hover {
@@ -638,7 +638,7 @@ form {
 }
 
 .card-img-top {
-  padding: 20px !important;
+  padding: 10px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
 }
@@ -698,6 +698,12 @@ form {
 @media (max-width: 768px) {
   .tech-icons {
     margin: 10px !important;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
