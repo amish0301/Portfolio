@@ -2,9 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Chrome_Extension from "../../Assets/Projects/App.png";
 import BMI_CAL from "../../Assets/Projects/BMI_CAL.png";
-import CHAT_APP from "../../Assets/Projects/chatApp-Demo.jpg";
+import CHAT_APP from "../../Assets/Projects/chatApp-Demo.png";
 import OA_APP from "../../Assets/Projects/OA_Platform.png";
-import expense from "../../Assets/Projects/Expense-Tracker.png";
+import E from "../../Assets/Projects/Expense-Tracker.png";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
 
