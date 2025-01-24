@@ -629,6 +629,7 @@ form {
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: auto !important;
+  position: relative !important;
 }
 
 .project-card-view:hover {
@@ -666,6 +667,39 @@ form {
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
+}
+
+.project-tag {
+  position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.project-tag span {
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  display: block;
+  width: 200px;
+  padding: 8px 0;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+}
+
+.project-ribbon span:hover {
+  background: linear-gradient(135deg, #0056b3, #003c7e);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* --------- */

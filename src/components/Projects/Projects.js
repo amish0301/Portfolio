@@ -24,6 +24,7 @@ function Projects() {
             <ProjectCard
               imgPath={OA_APP}
               isBlog={false}
+              isClient={true}
               title="YourPrepPartner"
               description="A testing platform where users take tests, track progress with detailed charts, and analyze performance scores. Admins and faculty can create and assign tests. It supports Google OAuth and credentials-based login. Built with React, Express.js, MongoDB, Node.js, and Redis."
               ghLink="https://github.com/amish0301/OA-Platform"
