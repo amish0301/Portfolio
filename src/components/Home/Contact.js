@@ -53,11 +53,12 @@ function Contact() {
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <label htmlFor="user_name">Name</label>
-        <input type="text" id="user_name" placeholder="your name" required={true} aria-label="Name" />
+        <input type="text" name="user_name" id="user_name" placeholder="your name" required={true} aria-label="Name" />
         <label htmlFor="user_email">Email</label>
         <input
           type="email"
           id="user_email"
+          name="user_email"
           placeholder="your email"
           required
           aria-label="Email"
