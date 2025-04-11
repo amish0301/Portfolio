@@ -4,6 +4,7 @@ import Chrome_Extension from "../../Assets/Projects/App.png";
 import BMI_CAL from "../../Assets/Projects/BMI_CAL.png";
 import CHAT_APP from "../../Assets/Projects/chatApp-Demo.png";
 import OA_APP from "../../Assets/Projects/OA_Platform.png";
+import Kangaroo_Solar from "../../Assets/Projects/Kangaroo_Solar.png";
 import EXPENSE_TRACKER from "../../Assets/Projects/Expense-Tracker.png";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
@@ -22,6 +23,17 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={Kangaroo_Solar}
+              isBlog={false}
+              isClient={true}
+              title="Kangaroo Solar"
+              description="A Full Stack web application for a Australian Based Solar Energy Company. It allows users to book appointments, view services, and manage their queries regarding Solar Services. The Admin panel enables service management and user oversight. Built with Latest Cutting Edge Technology like NextJs Framework, Tailwind CSS, MongoDB"
+              ghLink="https://github.com/amish0301/kangaroo-solar-next"
+              demoLink="https://kangaroo-solar-next.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={OA_APP}
               isBlog={false}
               isClient={true}
@@ -31,7 +43,7 @@ function Projects() {
               demoLink="https://oa-umber.vercel.app/"
             />
           </Col>
-          
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={CHAT_APP}
@@ -75,18 +87,6 @@ function Projects() {
               demoLink="https://chromewebstore.google.com/"
             />
           </Col>
-
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-         */}
         </Row>
       </Container>
     </Container>

@@ -35,7 +35,6 @@ function ProjectCards(props) {
             variant="primary"
             href={props.demoLink}
             target="_blank"
-            style={{ marginLeft: "10px" }}
           >
             <CgWebsite /> &nbsp;
             {"Demo"}
