@@ -22,7 +22,7 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/amish0301/Portfolio"
+                href="https://github.com/amish0301"
                 style={{ color: "white" }}
                 aria-label="GitHub"
                 target="_blank" 
