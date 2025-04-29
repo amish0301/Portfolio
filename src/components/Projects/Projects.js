@@ -29,7 +29,7 @@ function Projects() {
               title="Kangaroo Solar"
               description="A Full Stack web application for a Australian Based Solar Energy Company. It allows users to book appointments, view services, and manage their queries regarding Solar Services. The Admin panel enables service management and user oversight. Built with Latest Cutting Edge Technology like NextJs Framework, Tailwind CSS, MongoDB"
               ghLink="https://github.com/amish0301/kangaroo-solar-next"
-              demoLink="https://kangaroo-solar-next.vercel.app/"
+              demoLink="https://kangaroo-solar.vercel.app"
             />
           </Col>
           <Col md={4} className="project-card">
