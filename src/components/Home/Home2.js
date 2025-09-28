@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
 import myImg from "../../Assets/hat.webp";
 import Contact from "./Contact";
+import WorkExperience from "../Experience/Experience";
 
 function Home2() {
   return (
@@ -76,6 +77,8 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
+        <WorkExperience isFromHome />
 
         {/* subject query form */}
         <Contact />

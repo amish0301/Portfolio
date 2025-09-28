@@ -16,7 +16,8 @@ function Contact() {
         "template_8paa9hc",
         form.current,
         "WfJIBkAtmucEB93im"
-      ).then(
+      )
+      .then(
         () => {
           toast.success("Message sent Successfully!", {
             position: "top-right",
@@ -46,14 +47,25 @@ function Contact() {
   };
 
   return (
-    <Container className="contact-container">
+    <Container
+      className="contact-container"
+      id='contact'
+      style={{ marginBlockStart: "35px" }}
+    >
       <div>
         <h2 style={{ fontWeight: "bold" }}>Contact Me</h2>
         <MdContactMail className="contact-logo" />
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <label htmlFor="user_name">Name</label>
-        <input type="text" name="user_name" id="user_name" placeholder="your name" required={true} aria-label="Name" />
+        <input
+          type="text"
+          name="user_name"
+          id="user_name"
+          placeholder="your name"
+          required={true}
+          aria-label="Name"
+        />
         <label htmlFor="user_email">Email</label>
         <input
           type="email"
@@ -64,7 +76,13 @@ function Contact() {
           aria-label="Email"
         />
         <label htmlFor="message">Message</label>
-        <textarea  id="message" className="msg" required={true} placeholder="type your message here.." name="message" />
+        <textarea
+          id="message"
+          className="msg"
+          required={true}
+          placeholder="type your message here.."
+          name="message"
+        />
         <input type="submit" aria-label="Submit" value="Send" />
       </form>
     </Container>
