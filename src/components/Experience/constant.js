@@ -1,5 +1,3 @@
-import { MdTrendingUp } from "react-icons/md";
-import { FaLaptopCode, FaBriefcase } from "react-icons/fa";
 import NetAiLogo from '../../Assets/netai-logo.png'
 import BluexkyeLogo from '../../Assets/bluexkye-logo.jpg'
 

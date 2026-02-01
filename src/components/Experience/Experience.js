@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 
 function WorkExperience({ isFromHome = false }) {
   const [visibleItems, setVisibleItems] = useState(new Set());
-  const [hoveredItem, setHoveredItem] = useState(null);
   const observerRef = useRef(null);
   const navigate = useNavigate();
 
@@ -83,8 +82,6 @@ function WorkExperience({ isFromHome = false }) {
                   {/* Experience Card */}
                   <div
                     className={`experience-card ${exp.colorClass}`}
-                    onMouseEnter={() => setHoveredItem(exp.id)}
-                    onMouseLeave={() => setHoveredItem(null)}
                   >
                     {/* Company icon and type badge */}
                     <div className="card-header">
