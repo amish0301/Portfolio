@@ -1,0 +1,680 @@
+/* ==========================================================================
+   Work Experience — theme tokens
+   Derived from the portfolio's existing hero/about palette:
+   deep space background, violet/purple accents, soft blue secondary accent.
+   Swap the @import for your project's actual font <link> if already loaded
+   globally — keeping it here makes this file drop-in self-contained.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+
+.we-section {
+  --we-bg: #0a0a14;
+  --we-purple: #a855f7;
+  --we-purple-light: #c084fc;
+  --we-purple-dark: #7c3aed;
+  --we-blue: #60a5fa;
+  --we-pink: #f472b6;
+  --we-green: #34d399;
+  --we-orange: #fb923c;
+
+  --we-text-primary: #f3f1fb;
+  --we-text-secondary: #a9a4c4;
+  --we-text-muted: #746f92;
+
+  --we-card-bg: rgba(255, 255, 255, 0.035);
+  --we-card-border: rgba(168, 85, 247, 0.18);
+  --we-card-border-hover: rgba(168, 85, 247, 0.45);
+
+  --we-font-display: "Poppins", "Segoe UI", sans-serif;
+  --we-font-body: "Inter", "Segoe UI", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--we-bg);
+  padding: 6.5rem 1.5rem 7rem;
+  font-family: var(--we-font-body);
+  isolation: isolate;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Ambient background orbs — echoes the hero/about section atmosphere      */
+/* ---------------------------------------------------------------------- */
+
+.we-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+.we-orb-1 {
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  left: -140px;
+  background: radial-gradient(circle, var(--we-purple-dark), transparent 70%);
+}
+
+.we-orb-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  right: -120px;
+  background: radial-gradient(circle, var(--we-blue), transparent 70%);
+  opacity: 0.22;
+}
+
+.we-orb-3 {
+  width: 300px;
+  height: 300px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--we-purple), transparent 70%);
+  opacity: 0.12;
+}
+
+.we-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Header                                                                   */
+/* ---------------------------------------------------------------------- */
+
+.we-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.we-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: var(--we-purple-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.we-badge-icon {
+  font-size: 0.85rem;
+}
+
+.we-title {
+  font-family: var(--we-font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--we-text-primary);
+  margin: 0 0 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.we-subtitle {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--we-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Timeline                                                                 */
+/* ---------------------------------------------------------------------- */
+
+.we-timeline {
+  position: relative;
+}
+
+.we-timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(168, 85, 247, 0.05),
+    rgba(168, 85, 247, 0.35) 10%,
+    rgba(168, 85, 247, 0.35) 90%,
+    rgba(168, 85, 247, 0.05)
+  );
+  overflow: hidden;
+}
+
+.we-timeline-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--we-purple-dark),
+    var(--we-purple-light)
+  );
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: we-fill-line 1.6s ease-out forwards;
+}
+
+@keyframes we-fill-line {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.we-item {
+  position: relative;
+  padding-left: 68px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.we-item:last-child {
+  margin-bottom: 0;
+}
+
+.we-item-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline node — small pulsing "constellation point" */
+
+.we-node {
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.we-node-core {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--we-purple);
+  box-shadow: 0 0 12px 2px rgba(168, 85, 247, 0.7);
+  z-index: 1;
+}
+
+.we-node-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  animation: we-pulse 2.6s ease-out infinite;
+}
+
+.we-item-visible .we-node-ring {
+  animation-play-state: running;
+}
+
+@keyframes we-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+.we-node.blue .we-node-core {
+  background: var(--we-blue);
+  box-shadow: 0 0 12px 2px rgba(96, 165, 250, 0.7);
+}
+.we-node.pink .we-node-core {
+  background: var(--we-pink);
+  box-shadow: 0 0 12px 2px rgba(244, 114, 182, 0.7);
+}
+.we-node.green .we-node-core {
+  background: var(--we-green);
+  box-shadow: 0 0 12px 2px rgba(52, 211, 153, 0.7);
+}
+.we-node.orange .we-node-core {
+  background: var(--we-orange);
+  box-shadow: 0 0 12px 2px rgba(251, 146, 60, 0.7);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Card                                                                     */
+/* ---------------------------------------------------------------------- */
+
+.we-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.045);
+  border-radius: 16px;
+  padding: 1.35rem 1.5rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 12px 30px -22px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.we-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 16px 34px -18px rgba(124, 58, 237, 0.4);
+}
+
+.we-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.we-company-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--we-purple-light);
+  font-size: 1.05rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Real logo images sit on a light chip so dark/text-based logos stay legible */
+.we-company-icon.has-logo {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 5px;
+}
+
+.we-company-icon.blue {
+  background: rgba(96, 165, 250, 0.12);
+  color: var(--we-blue);
+}
+.we-company-icon.pink {
+  background: rgba(244, 114, 182, 0.12);
+  color: var(--we-pink);
+}
+.we-company-icon.green {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--we-green);
+}
+.we-company-icon.orange {
+  background: rgba(251, 146, 60, 0.12);
+  color: var(--we-orange);
+}
+
+.we-company-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.we-type-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--we-purple-light);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.we-type-badge.blue {
+  background: rgba(96, 165, 250, 0.1);
+  color: var(--we-blue);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+.we-type-badge.pink {
+  background: rgba(244, 114, 182, 0.1);
+  color: var(--we-pink);
+  border-color: rgba(244, 114, 182, 0.25);
+}
+.we-type-badge.green {
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--we-green);
+  border-color: rgba(52, 211, 153, 0.25);
+}
+.we-type-badge.orange {
+  background: rgba(251, 146, 60, 0.1);
+  color: var(--we-orange);
+  border-color: rgba(251, 146, 60, 0.25);
+}
+
+.we-role {
+  font-family: var(--we-font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--we-text-primary);
+  margin: 0 0 0.15rem;
+  line-height: 1.35;
+}
+
+.we-company {
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: var(--we-purple-light);
+  margin: 0 0 0.65rem;
+}
+
+.we-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.we-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--we-text-secondary);
+}
+
+.we-meta-icon {
+  font-size: 0.72rem;
+}
+
+.we-meta-icon-purple {
+  color: var(--we-purple-light);
+}
+
+.we-meta-icon-blue {
+  color: var(--we-blue);
+}
+
+.we-description {
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--we-text-secondary);
+  margin: 0 0 0.9rem;
+}
+
+.we-block {
+  margin-bottom: 0.8rem;
+}
+
+.we-block:last-child {
+  margin-bottom: 0;
+}
+
+.we-block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--we-text-primary);
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.we-block-icon-award {
+  color: var(--we-orange);
+}
+
+.we-block-icon-tech {
+  color: var(--we-blue);
+}
+
+.we-achievements {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.we-achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--we-text-secondary);
+}
+
+.we-achievement-icon {
+  margin-top: 0.3rem;
+  font-size: 0.58rem;
+  color: var(--we-purple-light);
+  flex-shrink: 0;
+}
+
+.we-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.we-tech-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--we-text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.28rem 0.65rem;
+  border-radius: 7px;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+.we-tech-tag:hover {
+  background: rgba(168, 85, 247, 0.14);
+  color: var(--we-text-primary);
+}
+
+/* Show more / show less toggle for the achievements list */
+.we-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.6rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--we-purple-light);
+  font-family: var(--we-font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.we-toggle-btn:hover {
+  color: var(--we-text-primary);
+}
+
+.we-toggle-icon {
+  font-size: 0.62rem;
+  transition: transform 0.25s ease;
+}
+
+.we-toggle-btn[aria-expanded="true"] .we-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* ---------------------------------------------------------------------- */
+/* CTA                                                                      */
+/* ---------------------------------------------------------------------- */
+
+.we-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.we-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--we-purple-dark), var(--we-purple));
+  color: #fff;
+  font-family: var(--we-font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 30px -12px rgba(168, 85, 247, 0.65);
+}
+
+.we-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(168, 85, 247, 0.8);
+}
+
+.we-cta-icon {
+  font-size: 0.8rem;
+  transition: transform 0.25s ease;
+}
+
+.we-cta-button:hover .we-cta-icon {
+  transform: translateX(3px);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Desktop — alternating left/right layout                                 */
+/* ---------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  .we-timeline-track {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .we-item {
+    width: calc(50% - 40px);
+    padding-left: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .we-item-left {
+    margin-right: auto;
+    padding-right: 40px;
+    text-align: right;
+  }
+
+  .we-item-right {
+    margin-left: auto;
+    padding-left: 40px;
+  }
+
+  .we-item-left .we-meta,
+  .we-item-left .we-block-header,
+  .we-item-left .we-achievement-item,
+  .we-item-left .we-tech-grid,
+  .we-item-left .we-card-header {
+    justify-content: flex-end;
+  }
+
+  .we-item-left .we-achievement-item {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .we-item-left .we-card-header {
+    flex-direction: row-reverse;
+  }
+
+  .we-node {
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+  }
+
+  .we-item-left .we-node {
+    left: auto;
+    right: -49px;
+    transform: translateX(50%);
+  }
+
+  .we-item-right .we-node {
+    left: -49px;
+    transform: translateX(-50%);
+  }
+
+  .we-item-left {
+    transform: translateY(28px);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Small screens                                                           */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .we-section {
+    padding: 4.5rem 1rem 5rem;
+  }
+
+  .we-header {
+    margin-bottom: 3rem;
+  }
+
+  .we-item {
+    padding-left: 52px;
+    margin-bottom: 2.25rem;
+  }
+
+  .we-node {
+    left: 12px;
+  }
+
+  .we-timeline-track {
+    left: 20px;
+  }
+
+  .we-card {
+    padding: 1.1rem 1.2rem;
+  }
+
+  .we-role {
+    font-size: 1rem;
+  }
+
+  .we-meta {
+    gap: 0.75rem;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reduced motion                                                          */
+/* ---------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .we-item,
+  .we-node-ring,
+  .we-timeline-fill,
+  .we-card,
+  .we-cta-button,
+  .we-cta-icon {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .we-item {
+    opacity: 1;
+    transform: none;
+  }
+}

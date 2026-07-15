@@ -12,9 +12,10 @@ export const experiences = [
     description:
       "Working in the frontend team to build optimized, scalable, and reusable components for enterprise applications. Developing Higher-Order Components and implementing state management using Zustand.",
     achievements: [
-      "Built highly reusable HOCs for UI components improving developer productivity",
-      "Optimized Next.js applications for faster load and better SEO",
-      "Implemented state management using Zustand, simplifying global state handling",
+      "Built interactive World Map Visualization Network Topology with real-time alert detection, reducing incident investigation time by approximately 30%",
+      "Designed and developed a Software License Request and Management Dashboard, enabling sales requests, approval flow, and license visibility, reducing manual coordination delays",
+      "Implemented Role-Based Access Control (RBAC) to securely manage permissions across multiple user roles",
+      "Integrated gRPC APIs and optimized Next.js components, improving application load times by 20%",
     ],
     technologies: ["Next.js", "Tailwind CSS", "Zustand", "React", "TypeScript"],
     companyImage: NetAiLogo,

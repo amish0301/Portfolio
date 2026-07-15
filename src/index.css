@@ -1433,7 +1433,7 @@ form {
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .timeline-line {
     left: 50%;
     transform: translateX(-50%);
@@ -1457,8 +1457,8 @@ form {
     margin-left: auto;
     padding-left: 3rem;
   }
-}
-
+} */
+/* 
 @media (min-width: 1024px) {
   .work-experience-container {
     padding: 6rem 2rem;
@@ -1485,10 +1485,10 @@ form {
   .experience-item:nth-child(even) .experience-card {
     padding-left: 4rem;
   }
-}
+} */
 
 /* Mobile optimizations */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .timeline-line {
     left: 1rem !important;
     transform: none !important;
@@ -1517,4 +1517,4 @@ form {
   .type-badge {
     align-self: flex-start;
   }
-}
+} */
